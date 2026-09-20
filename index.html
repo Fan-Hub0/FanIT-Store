@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FanIT Store | Premium Top Up & Digital Services</title>
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- AMBIENT GLOW BACKGROUND -->
+  <div class="glow-bg"></div>
+
+  <!-- ================= ANNOUNCEMENT BAR ================= -->
+<div class="announcement-bar">
+  <div class="marquee-content">
+    <span><i class="fa-solid fa-bolt"></i> Layanan Otomatis 24/7 Diproses Instan</span>
+    <span><i class="fa-solid fa-shield-halved"></i> Garansi 100% Amanah & Terpercaya</span>
+    <span><i class="fa-brands fa-whatsapp"></i> Bantuan & Kendala Pesanan? Hubungi CS WhatsApp</span>
+    <span><i class="fa-solid fa-fire"></i> Promo Top Up MLBB & Free Fire Termurah Hari Ini!</span>
+  </div>
+</div>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-gamepad"></i></div>
+      <span>FanIT<span class="highlight">Store</span></span>
+      <!-- Theme Color Switcher -->
+      <!-- Ditempel di bagian Navbar -->
+<div class="theme-colors">
+  <span class="color-dot" data-color="#0ea5e9" style="background-color: #0ea5e9;"></span>
+  <span class="color-dot" data-color="#10b981" style="background-color: #10b981;"></span>
+  <span class="color-dot" data-color="#ec4899" style="background-color: #ec4899;"></span>
+  <span class="color-dot" data-color="#f59e0b" style="background-color: #f59e0b;"></span>
+</div>
+    
+    <div class="nav-action-group">
+      <button id="btnOpenHistory" class="nav-btn">
+        <i class="fa-solid fa-clock-rotate-left"></i> <span>Riwayat</span>
+      </button>
+      <button id="btnOpenTracker" class="nav-btn primary-glow">
+        <i class="fa-solid fa-magnifying-glass-chart"></i> <span>Lacak Pesanan</span>
+      </button>
+    </div>
+    </div>
+
+
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="Cari game atau layanan...">
+    </div>
+  </header>
+
+ <!-- HERO SECTION WITH CAROUSEL -->
+<div class="hero-banner">
+  <div class="carousel-container" id="heroCarousel">
+    
+    <!-- Slide 1: Gaya Gamer Utama -->
+    <div class="carousel-slide active">
+      <span class="hero-badge"><i class="fa-solid fa-gamepad"></i> PLATFORM TOP UP MASA KINI</span>
+      <h2>Gak Pakai Lama, <span class="highlight">Diamond Langsung Landing!</span></h2>
+      <p>Push rank tanpa hambatan. Top up kilat hitungan detik, harga ramah kantong.</p>
+      
+      <div class="hero-trust-tags">
+        <span><i class="fa-solid fa-bolt"></i> Proses Kilat</span>
+        <span><i class="fa-solid fa-fire"></i> Harga Pelajar</span>
+        <span><i class="fa-solid fa-shield-halved"></i> 100% Legal</span>
+      </div>
+    </div>
+
+    <!-- Slide 2: Sultan & Hemat -->
+    <div class="carousel-slide">
+      <span class="hero-badge"><i class="fa-solid fa-fire"></i> HARGA PELAJAR, KUALITAS SULTAN</span>
+      <h2>Auto Sultan <span class="highlight">Tanpa Bikin Dompet Kering</span></h2>
+      <p>Layanan top up paling fleksibel buat kamu yang mau tampil keren di game favorit.</p>
+      
+      <div class="hero-trust-tags">
+        <span><i class="fa-solid fa-wallet"></i> QRIS All Payment</span>
+        <span><i class="fa-solid fa-percent"></i> Promo Tiap Hari</span>
+        <span><i class="fa-solid fa-clock"></i> 24/7 Nonstop</span>
+      </div>
+    </div>
+
+    <!-- Slide 3: Keamanan & Garansi -->
+    <div class="carousel-slide">
+      <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> AMAN & BERGARANSI</span>
+      <h2>Beli Aman, <span class="highlight">Proses Cepat Tanpa Antre</span></h2>
+      <p>Transaksi instan terhubung otomatis ke akun game kamu, 100% legal dan terpercaya.</p>
+      
+      <div class="hero-trust-tags">
+        <span><i class="fa-solid fa-circle-check"></i> Garansi Resmi</span>
+        <span><i class="fa-solid fa-headset"></i> CS Fast Respon</span>
+        <span><i class="fa-solid fa-lock"></i> Anti Minus</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Indikator Carousel (Dots) -->
+  <div class="carousel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+      <!-- Indikator Titik Carousel -->
+      <div class="carousel-dots" id="carouselDots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+
+    </div>
+  </div>
+
+  <main class="container">
+    <!-- CATEGORY TABS -->
+    <div class="category-filters">
+      <button class="tab-btn active" data-category="all">Semua</button>
+      <button class="tab-btn" data-category="game">Game Top Up</button>
+      <button class="tab-btn" data-category="streaming">Streaming & App</button>
+      <button class="tab-btn" data-category="pulsa">Pulsa & Data</button>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid" id="productGrid">
+      
+      <!-- PRODUCT GRID CONTAINER (Pastikan dari pembuka sampai penutup ditimpa semua) -->
+<div class="product-grid" id="productGrid">
+
+  <!-- 1. Mobile Legends -->
+  <div class="product-card" data-id="mobilelegends" data-name="Mobile Legends" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/logomlbbck-ezgif.jpeg" alt="Mobile Legends">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Mobile Legends</h3>
+      <p>Moonton</p>
+    </div>
+  </div>
+
+  <!-- 2. Free Fire -->
+  <div class="product-card" data-id="ff" data-name="Free Fire" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/FF.jpeg" alt="Free Fire">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Free Fire</h3>
+      <p>Garena</p>
+    </div>
+  </div>
+
+  <!-- 3. Valorant -->
+  <div class="product-card" data-id="valorant" data-name="Valorant" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/valorant.jpeg" alt="Valorant">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Valorant</h3>
+      <p>Riot Games</p>
+    </div>
+  </div>
+
+  <!-- 4. Genshin Impact -->
+  <div class="product-card" data-id="genshin" data-name="Genshin Impact" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/genshin.jpeg" alt="Genshin Impact">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Genshin Impact</h3>
+      <p>HoYoverse</p>
+    </div>
+  </div>
+
+  <!-- 5. PUBG Mobile -->
+  <div class="product-card" data-id="pubg" data-name="PUBG Mobile" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/pubg.png" alt="PUBG Mobile">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>PUBG Mobile</h3>
+      <p>Tencent Games</p>
+    </div>
+  </div>
+
+  <!-- 6. Honor of Kings -->
+  <div class="product-card" data-id="hok" data-name="Honor of Kings" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/HOK.jpeg" alt="Honor of Kings">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Honor of Kings</h3>
+      <p>Level Infinite</p>
+    </div>
+  </div>
+
+  <!-- 7. Roblox -->
+  <div class="product-card" data-id="roblox" data-name="Roblox Robux" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/roblox.jpeg" alt="Roblox">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Roblox</h3>
+      <p>Roblox Corporation</p>
+    </div>
+  </div>
+
+  <!-- 8. EA Sports FC Mobile -->
+  <div class="product-card" data-id="eafc" data-name="EA Sports FC Mobile" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/fc.jpeg" alt="EA Sports FC">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>EA Sports FC</h3>
+      <p>EA Sports</p>
+    </div>
+  </div>
+
+  <!-- 9. Call of Duty Mobile -->
+  <div class="product-card" data-id="codm" data-name="Call of Duty Mobile" data-category="game">
+    <div class="card-img-wrapper">
+      <img src="image/COD.jpeg" alt="CODM">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>CODM</h3>
+      <p>Garena / Activision</p>
+    </div>
+  </div>
+
+  <!-- 10. Netflix Premium -->
+  <div class="product-card" data-id="netflix" data-name="Netflix Premium" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/netflix.png" alt="Netflix Premium">
+      <span class="card-badge">Garansi</span>
+    </div>
+    <div class="card-info">
+      <h3>Netflix Premium</h3>
+      <p>Streaming Movies</p>
+    </div>
+  </div>
+
+  <!-- 11. Spotify Premium -->
+  <div class="product-card" data-id="spotify" data-name="Spotify Premium" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/spotify.png" alt="Spotify Premium">
+      <span class="card-badge">Garansi</span>
+    </div>
+    <div class="card-info">
+      <h3>Spotify Premium</h3>
+      <p>Music Streaming</p>
+    </div>
+  </div>
+
+  <!-- 12. YouTube Premium -->
+  <div class="product-card" data-id="youtube" data-name="YouTube Premium" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/yt.png" alt="YouTube Premium">
+      <span class="card-badge">Garansi</span>
+    </div>
+    <div class="card-info">
+      <h3>YouTube Premium</h3>
+      <p>No Ads & Music</p>
+    </div>
+  </div>
+
+  <!-- 13. Canva Pro -->
+  <div class="product-card" data-id="canva" data-name="Canva Pro" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/canva.jpg" alt="Canva Pro">
+      <span class="card-badge">Design</span>
+    </div>
+    <div class="card-info">
+      <h3>Canva Pro</h3>
+      <p>Design Editor App</p>
+    </div>
+  </div>
+
+  <!-- 14. CapCut Pro -->
+  <div class="product-card" data-id="capcut" data-name="CapCut Pro" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/capcut.png" alt="CapCut Pro">
+      <span class="card-badge">Editor</span>
+    </div>
+    <div class="card-info">
+      <h3>CapCut Pro</h3>
+      <p>Video Editor App</p>
+    </div>
+  </div>
+
+  <!-- 15. Disney+ Hotstar -->
+  <div class="product-card" data-id="disney" data-name="Disney+ Hotstar" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/disney.jpg" alt="Disney+ Hotstar">
+      <span class="card-badge">Streaming</span>
+    </div>
+    <div class="card-info">
+      <h3>Disney+ Hotstar</h3>
+      <p>Movies & Series</p>
+    </div>
+  </div>
+
+  <!-- 16. Vidio Platinum -->
+  <div class="product-card" data-id="vidio" data-name="Vidio Platinum" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/vidio.jpeg" alt="Vidio Platinum">
+      <span class="card-badge">Sports & TV</span>
+    </div>
+    <div class="card-info">
+      <h3>Vidio Platinum</h3>
+      <p>Local & Sports Streaming</p>
+    </div>
+  </div>
+
+  <!-- 17. Viu Premium -->
+  <div class="product-card" data-id="viu" data-name="Viu Premium" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/viu.jpeg" alt="Viu Premium">
+      <span class="card-badge">Drakor</span>
+    </div>
+    <div class="card-info">
+      <h3>Viu Premium</h3>
+      <p>Asian Drama & Movie</p>
+    </div>
+  </div>
+
+  <!-- 18. WeTV VIP -->
+  <div class="product-card" data-id="wetv" data-name="WeTV VIP" data-category="streaming">
+    <div class="card-img-wrapper">
+      <img src="image/wetv.jpg" alt="WeTV VIP">
+      <span class="card-badge">VIP Access</span>
+    </div>
+    <div class="card-info">
+      <h3>WeTV VIP</h3>
+      <p>Anime & Series</p>
+    </div>
+  </div>
+
+  <!-- 1. Telkomsel -->
+  <div class="product-card" data-id="telkomsel" data-name="Telkomsel" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/telkomsel.jpeg" alt="Telkomsel">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Telkomsel</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+
+  <!-- 2. Indosat Ooredoo -->
+  <div class="product-card" data-id="indosat" data-name="Indosat Ooredoo" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/indosat.jpeg" alt="Indosat Ooredoo">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Indosat Ooredoo</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+
+  <!-- 3. XL Axiata -->
+  <div class="product-card" data-id="xl" data-name="XL Axiata" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/xl.jpeg" alt="XL Axiata">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>XL Axiata</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+
+  <!-- 4. Tri (3) -->
+  <div class="product-card" data-id="tri" data-name="Tri" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/tri.jpeg" alt="Tri">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Tri (3)</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+  <div class="product-card" data-id="smartfren" data-name="Smartfren" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/smartfren.jpeg" alt="Smartfren">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>Smartfren</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+
+  <!-- 6. AXIS -->
+  <div class="product-card" data-id="axis" data-name="AXIS" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/axis.jpeg" alt="AXIS">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>AXIS</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+
+  <!-- 7. by.U -->
+  <div class="product-card" data-id="byu" data-name="by.U" data-category="pulsa">
+    <div class="card-img-wrapper">
+      <img src="image/byu.jpeg" alt="by.U">
+      <span class="card-badge">Instant</span>
+    </div>
+    <div class="card-info">
+      <h3>by.U</h3>
+      <p>Pulsa & Data</p>
+    </div>
+  </div>
+</div> <!-- TAG PENUTUP WADAH GRID Utama -->
+
+    </div>
+
+    <!-- MODAL RIWAYAT TRANSAKSI -->
+    <div id="historyModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3><i class="fa-solid fa-clock-rotate-left"></i> Riwayat Transaksi Saya</h3>
+          <button id="closeHistoryModal" class="close-modal-btn">&times;</button>
+        </div>
+        <div id="modalHistoryContainer" class="modal-body-scroll"></div>
+      </div>
+    </div>
+
+    <!-- MODAL LACAK PESANAN -->
+    <div id="trackerModal" class="modal-overlay">
+      <!-- TIMELINE STATUS PESANAN -->
+  <div class="order-timeline-container" id="orderTimelineBox">
+    <div class="timeline-header">
+      ID Pesanan: <span id="displayOrderId">-</span>
+      <strong id="displayStatusText" style="color: #38bdf8;">Menunggu</strong>
+    </div>
+    
+    <div class="timeline-steps">
+      <!-- Step 1 -->
+      <div class="timeline-step completed" id="tStep1">
+        <div class="step-icon"><i class="fa-solid fa-receipt"></i></div>
+        <div class="step-label">Pesanan Dibuat</div>
+      </div>
+      <!-- Step 2 -->
+      <div class="timeline-step active-step" id="tStep2">
+        <div class="step-icon"><i class="fa-solid fa-spinner"></i></div>
+        <div class="step-label">Diproses Admin</div>
+      </div>
+      <!-- Step 3 -->
+      <div class="timeline-step" id="tStep3">
+        <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="step-label">Selesai</div>
+      </div>
+    </div>
+  </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Cek Status Pesanan</h3>
+          <button id="closeTrackerModal" class="close-modal-btn">&times;</button>
+        </div>
+        
+        <div class="tracker-input-box">
+          <input type="text" id="trackInputId" placeholder="ID Transaksi (Contoh: FIT-693839)">
+          <button id="btnDoTrack">Cek</button>
+        </div>
+
+        <div id="trackResultContainer" class="tracker-result-area">
+          <p class="tracker-placeholder-text">Masukkan ID transaksi yang tertera saat checkout untuk melihat status pesanan secara real-time.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CHECKOUT -->
+    <div class="modal" id="orderModal">
+      <div class="modal-content modal-lg">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="modal-title-box">
+          <h2 id="modalTitle">Order Produk</h2>
+          <p>Lengkapi formulir di bawah untuk memproses pesanan Anda.</p>
+        </div>
+        
+        <form id="checkoutForm">
+          <input type="hidden" id="item_name" name="item_name">
+          <input type="hidden" id="item_package" name="item_package">
+          <input type="hidden" id="item_price" name="item_price">
+
+          <div class="form-group">
+            <label class="form-label"><i class="fa-solid fa-box-open"></i> Pilih Nominal / Paket:</label>
+            <div id="packageOptions" class="package-grid"></div>
+          </div>
+
+          <!-- USER ID & ZONE ID + TOMBOL PETUNJUK -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="user_id" class="form-label">
+                <i class="fa-solid fa-user-tag"></i> User ID / Target:
+                <button type="button" id="btnHelpUserId" style="background: none; border: none; color: #38bdf8; cursor: pointer; margin-left: 6px; font-size: 0.8rem; font-weight: 600;">
+                  <i class="fa-solid fa-circle-question"></i> Petunjuk
+                </button>
+              </label>
+              <input type="text" id="user_id" placeholder="Masukkan ID Akun" required>
+            </div>
+
+            <div class="form-group" id="zone_idContainer" style="display: none;">
+              <label for="zone_id" class="form-label"><i class="fa-solid fa-server"></i> Zone ID / Server:</label>
+              <input type="text" id="zone_id" placeholder="Masukkan Zone ID">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="customer_email" class="form-label"><i class="fa-solid fa-envelope"></i> Email Konfirmasi:</label>
+              <input type="email" id="customer_email" placeholder="nama@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="customer_whatsapp" class="form-label"><i class="fa-brands fa-whatsapp"></i> Nomor WhatsApp:</label>
+              <input type="text" id="customer_whatsapp" placeholder="08xxxxxxxxxx" required>
+            </div>
+          </div>
+
+          <!-- BOX QRIS -->
+          <div class="qris-box">
+            <div class="qris-info-text">
+              <span class="qris-label">Total Pembayaran</span>
+              <strong id="qrisTotalPrice">Rp 0</strong>
+              <small><i class="fa-solid fa-qrcode"></i> Scan QRIS All Payment (GoPay, OVO, Dana, BCA, QRIS)</small>
+            </div>
+            <div class="qris-img-container">
+              <img src="payment/QRIS.jpeg" alt="QRIS Pembayaran" class="qris-image">
+            </div>
+          </div>
+
+          <!-- UPLOAD BUKTI TF DENGAN PREVIEW -->
+          <div class="form-group style-upload">
+            <label for="payment_proof" class="form-label">
+              <i class="fa-solid fa-receipt"></i> Upload Bukti Transfer (Screenshot)
+            </label>
+            <input type="file" id="payment_proof" accept="image/*" required>
+            
+            <div id="imagePreviewContainer" style="display: none; margin-top: 12px; text-align: center;">
+              <p style="color: #94a3b8; font-size: 0.75rem; margin-bottom: 6px;">Preview Bukti Transfer:</p>
+              <img id="imagePreview" src="" alt="Preview Bukti Transfer" style="max-width: 100%; max-height: 180px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.4);">
+            </div>
+          </div>
+
+          <button type="submit" id="btnSubmitOrder" class="btn-submit">
+            <i class="fa-solid fa-paper-plane"></i> Konfirmasi & Kirim Pesanan
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <!-- MODAL PETUNJUK CEK USER ID -->
+  <div id="userIdHelpModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 480px;">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-circle-question"></i> Cara Cek User ID Game</h3>
+        <button id="closeUserIdHelpModal" class="close-modal-btn">&times;</button>
+      </div>
+      <div style="padding: 10px 5px; color: #cbd5e1; font-size: 0.85rem; line-height: 1.6;">
+        <div style="margin-bottom: 12px; padding: 10px; background: rgba(15, 23, 42, 0.6); border-radius: 8px;">
+          <strong style="color: #38bdf8;">Mobile Legends:</strong><br>
+          Buka Profil di dalam game. ID & Zone ID tertera di bawah foto profil.<br>
+          <small style="color: #64748b;">Contoh: 12345678 (2001) &rarr; ID: 12345678, Zone: 2001</small>
+        </div>
+        <div style="margin-bottom: 12px; padding: 10px; background: rgba(15, 23, 42, 0.6); border-radius: 8px;">
+          <strong style="color: #38bdf8;">Free Fire:</strong><br>
+          Klik foto profil di pojok kiri atas. UID berupa deretan angka di samping avatar.
+        </div>
+        <div style="margin-bottom: 12px; padding: 10px; background: rgba(15, 23, 42, 0.6); border-radius: 8px;">
+          <strong style="color: #38bdf8;">Genshin Impact:</strong><br>
+          Lihat 9 digit angka UID yang selalu tampil di pojok kanan bawah layar game Anda.
+        </div>
+        <div style="padding: 10px; background: rgba(15, 23, 42, 0.6); border-radius: 8px;">
+          <strong style="color: #38bdf8;">PUBG Mobile:</strong><br>
+          Buka Profil game. Karakter ID (UID) berupa angka terletak di atas foto profil.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION ULASAN & RATING -->
+  <section class="reviews-section" id="ulasanSection">
+    <div class="section-header">
+      <h2>Ulasan & Rating Pelanggan</h2>
+      <p>Kepercayaan pelanggan adalah prioritas utama layanan kami</p>
+    </div>
+
+    <div class="reviews-container">
+      <div class="review-box">
+        <h3>Beri Ulasan Kamu</h3>
+        <form id="reviewForm">
+          <div class="review-input-wrap">
+            <input type="text" id="reviewerName" class="form-control" placeholder="Nama Anda" required>
+          </div>
+
+          <div class="review-input-wrap">
+            <label class="star-label-text">Pilih Rating Pelayanan:</label>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+              <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+              <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+              <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+              <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+            </div>
+          </div>
+
+          <div class="review-input-wrap">
+            <textarea id="reviewText" placeholder="Bagikan pengalaman transaksi kamu di sini..." rows="3" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit-review">
+            <i class="fa-solid fa-star"></i> Kirim Ulasan
+          </button>
+        </form>
+      </div>
+
+      <div class="reviews-list" id="reviewsGrid"></div>
+    </div>
+  </section>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/6285136629364?text=Halo%20Admin%20FanIT%20Store,%20saya%20butuh%20bantuan" class="floating-wa" target="_blank" title="Chat Admin via WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- MODAL QRIS ZOOM -->
+  <div id="qrisModal" class="modal-qris">
+    <span class="close-modal">&times;</span>
+    <img class="modal-qris-content" id="img01" alt="QRIS Zoom">
+  </div>
+
+  <!-- FLOATING BOTTOM NAVIGATION BAR (MOBILE FRIENDLY) -->
+  <nav class="floating-bottom-nav">
+    <a href="#" class="nav-item active" id="btnBottomHome">
+      <i class="fa-solid fa-house"></i>
+      <span>Beranda</span>
+    </a>
+    <button class="nav-item" id="btnBottomHistory">
+      <i class="fa-solid fa-clock-rotate-left"></i>
+      <span>Riwayat</span>
+    </button>
+    <button class="nav-item" id="btnBottomTracker">
+      <i class="fa-solid fa-magnifying-glass-chart"></i>
+      <span>Lacak</span>
+    </button>
+    <a href="https://wa.me/6285136629364?text=Halo%20Admin%20FanIT%20Store,%20saya%20butuh%20bantuan" class="nav-item" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>Bantuan</span>
+    </a>
+  </nav>
+  <!-- Toast Notifikasi Transaksi -->
+  <div id="socialProofToast" class="social-toast">
+    <div class="toast-icon">🛍️</div>
+    <div class="toast-content">
+      <span id="toastUser" class="toast-user">Farel dari Klaten</span>
+      <p id="toastMsg">baru saja sukses memesan 86 Diamonds</p>
+    </div>
+  </div>
+  <!-- Animasi Jaringan Latar Belakang (Canvas) -->
+  <canvas id="networkCanvas"></canvas>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3676 @@
+/* ========================================================
+   DESAIN MODERN & PREMIUM FANIT STORE
+   ======================================================== */
+
+:root {
+  --primary-color: #0ea5e9;
+  --primary-glow: rgba(14, 165, 233, 0.35);
+  --bg-dark: #090d16;
+  --card-bg: rgba(15, 23, 42, 0.75);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 1. ANNOUNCEMENT BAR MODERN */
+.announcement-bar {
+  background: linear-gradient(90deg, rgba(14, 165, 233, 0.12), rgba(16, 185, 129, 0.12));
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #cbd5e1;
+}
+
+.marquee-content span {
+  margin-right: 35px;
+}
+
+.marquee-content i {
+  color: var(--primary-color);
+  margin-right: 6px;
+}
+
+/* 2. NAVBAR FROSTED GLASS (EFEK KACA NGEBLUR) */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 5%;
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--primary-color), #0284c7);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.logo .highlight {
+  color: var(--primary-color);
+}
+
+/* Titik Pemilih Warna Tema */
+.theme-colors {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Tombol Riwayat & Lacak Pesanan */
+.nav-action-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.nav-btn.primary-glow {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.nav-btn.primary-glow:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 0 22px var(--primary-glow);
+}
+
+/* Kolom Pencarian (Search Box) */
+.search-box {
+  position: relative;
+  width: 250px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 9px 14px 9px 38px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  font-size: 0.85rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 12px var(--primary-glow);
+  background: rgba(15, 23, 42, 1);
+}
+
+/* 3. HERO BANNER MODERN & GLOWING */
+.hero-banner {
+  margin: 24px 5%;
+  border-radius: 20px;
+  background: radial-gradient(100% 100% at 50% 0%, rgba(14, 165, 233, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(14, 165, 233, 0.12);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.carousel-slide h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.carousel-slide p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 550px;
+  margin: 0 auto 24px auto;
+  line-height: 1.6;
+}
+
+/* Indikator Titik Carousel */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.carousel-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  width: 26px;
+  background: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* 1. Deklarasikan warna utama default di :root */
+:root {
+  --primary-color: #0ea5e9; /* Warna awal (Sky Blue) */
+}
+
+/* 2. Terapkan variabel --primary-color ke elemen yang ingin berubah warna */
+.highlight {
+  color: var(--primary-color) !important;
+}
+
+.primary-glow,
+.tab-btn.active,
+.btn-submit,
+.card-badge {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+/* Kursor pointer agar dot terlihat bisa diklik */
+.color-dot {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+}
+/* ==========================================================
+   STYLING UTAMA: MEWAH, MODERN, & CLEAN GAMING DARK THEME
+   ========================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: #030712;
+  color: #f3f4f6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* AMBIENT GLOW EFFECT */
+.glow-bg {
+  position: fixed;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 80%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
+}
+
+.highlight {
+  color: #06b6d4;
+}
+
+.nav-action-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-btn {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-btn:hover {
+  background: rgba(30, 41, 59, 1);
+  border-color: rgba(6, 182, 212, 0.4);
+  transform: translateY(-1px);
+}
+
+.primary-glow {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(59, 130, 246, 0.15));
+  border-color: rgba(6, 182, 212, 0.3);
+  color: #22d3ee;
+}
+
+.primary-glow:hover {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(6, 182, 212, 0.4);
+}
+
+.search-box {
+  position: relative;
+  width: 260px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+}
+
+/* HERO SECTION */
+.hero-section {
+  padding: 50px 5% 30px 5%;
+  text-align: center;
+}
+
+.badge-tag {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  color: #22d3ee;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(6, 182, 212, 0.1);
+}
+
+.hero-content h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff 30%, #94a3b8 100%);
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* CONTAINER & TABS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5% 50px 5%;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.tab-btn {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #94a3b8;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(6, 182, 212, 0.3);
+}
+
+/* PRODUCT GRID & CARDS (LUXURY THEME STYLING) */
+/* ================= GRID & KARTU UTAMA ================= */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  padding: 10px 0;
+}
+
+@media (min-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(6, 1fr); /* 6 kolom di layar besar */
+  }
+}
+
+.product-card {
+  position: relative;
+  aspect-ratio: 3 / 4; /* Rasio vertikal poster game */
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #1e293b;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* ================= BACKGROUND GAMBAR ================= */
+.card-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* BADGE KECIL DI POJOK ATAS */
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 12px;
+  z-index: 3;
+}
+
+/* ================= INFORMASI TEKS (DEFAULT: SEMBUNYI) ================= */
+.card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 10px 10px 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 65%, transparent 100%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+
+  /* Animasi Sembunyi ke Bawah */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-info h3 {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.card-info p {
+  color: #a1a1aa;
+  font-size: 0.72rem;
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+/* ================= EFEK HOVER & SELECTION (.active) ================= */
+
+/* 1. Border & Glow Menyala Warna Amber/Gold */
+.product-card:hover,
+.product-card.active {
+  border-color: #f59e0b;
+  box-shadow: 0 0 16px rgba(245, 158, 11, 0.35);
+  transform: translateY(-4px);
+}
+
+/* 2. Animasi Teks Meluncur Muncul ke Atas */
+.product-card:hover .card-info,
+.product-card.active .card-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 3. Zoom Halus pada Gambar Poster */
+.product-card:hover .card-img-wrapper,
+.product-card.active .card-img-wrapper {
+  transform: scale(1.06);
+}
+
+.service-badge {
+  background: rgba(6, 182, 212, 0.2);
+  border-color: rgba(6, 182, 212, 0.4);
+  color: #22d3ee;
+}
+
+/* Custom Gradients for Cards */
+.mlbb-bg { background: linear-gradient(135deg, #1e3a8a, #0284c7); }
+.ff-bg { background: linear-gradient(135deg, #7c2d12, #ea580c); }
+.val-bg { background: linear-gradient(135deg, #831843, #e11d48); }
+.gi-bg { background: linear-gradient(135deg, #3b0764, #7c3aed); }
+.pubg-bg { background: linear-gradient(135deg, #365314, #65a30d); }
+.netflix-bg { background: linear-gradient(135deg, #450a0a, #dc2626); }
+.spotify-bg { background: linear-gradient(135deg, #064e3b, #059669); }
+.yt-bg { background: linear-gradient(135deg, #581c87, #9333ea); }
+.recovery-bg { background: linear-gradient(135deg, #1f2937, #4b5563); }
+.net-bg { background: linear-gradient(135deg, #0f172a, #0369a1); }
+
+.product-info {
+  padding: 14px;
+}
+
+.product-info h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.product-info p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+/* MODALS / POPUPS STYLING */
+.modal-overlay, .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-overlay.active, .modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #0b0f19;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 460px;
+  padding: 24px;
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.modal-lg {
+  max-width: 540px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 12px;
+}
+
+.modal-header h3 {
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.modal-header h3 i {
+  color: #06b6d4;
+}
+
+.close-modal-btn, .close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-modal-btn:hover, .close-btn:hover {
+  color: #fff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal-title-box {
+  margin-bottom: 16px;
+}
+
+.modal-title-box h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.modal-title-box p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* FORM ELEMENTS */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media(max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(3, 7, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+}
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.package-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.package-card strong {
+  font-size: 0.85rem;
+  color: #f3f4f6;
+}
+
+.package-card span {
+  font-size: 0.8rem;
+  color: #06b6d4;
+  font-weight: 600;
+}
+
+.package-card.selected {
+  border-color: #06b6d4;
+  background: rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.15);
+}
+
+.qris-box {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  padding: 14px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.qris-info-text .qris-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  display: block;
+}
+
+.qris-info-text strong {
+  font-size: 1.15rem;
+  color: #06b6d4;
+  display: block;
+  margin: 2px 0;
+}
+
+.qris-info-text small {
+  color: #64748b;
+  font-size: 0.7rem;
+}
+
+.qris-img-container {
+  background: #fff;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.qris-image {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.style-upload input[type="file"] {
+  padding: 8px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  background: rgba(3, 7, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* TRACKER & HISTORY CONTAINERS */
+.tracker-input-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.tracker-input-box input {
+  flex: 1;
+  background: rgba(3, 7, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #fff;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.tracker-input-box button {
+  background: #06b6d4;
+  border: none;
+  border-radius: 10px;
+  padding: 0 16px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tracker-placeholder-text {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.modal-body-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+/* SECTION ULASAN */
+.reviews-section {
+  max-width: 1200px;
+  margin: 10px auto 60px auto;
+  padding: 0 5%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.section-header p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 20px;
+}
+
+@media(max-width: 768px) {
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.review-box {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.review-box h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.review-input-wrap {
+  margin-bottom: 12px;
+}
+
+.review-input-wrap input, .review-input-wrap textarea {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(3, 7, 18, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #fff;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.review-input-wrap input:focus, .review-input-wrap textarea:focus {
+  border-color: #06b6d4;
+}
+
+.star-label-text {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 1.2rem;
+  color: #334155;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #fbbf24;
+}
+
+.btn-submit-review {
+  width: 100%;
+  padding: 10px;
+  background: #06b6d4;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-submit-review:hover {
+  background: #0891b2;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+/* FLOATING WHATSAPP */
+.floating-wa {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 99;
+  transition: transform 0.2s;
+}
+
+.floating-wa:hover {
+  transform: scale(1.1);
+}
+#qrisImg {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#qrisImg:hover {
+    opacity: 0.8;
+}
+
+.modal-qris {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-qris-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-content { /* Sesuaikan dengan class container popup Anda */
+    background: linear-gradient(135deg, rgba(13, 17, 23, 0.95), rgba(8, 11, 16, 0.98));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+}
+/* Card Nominal Default */
+.nominal-card { /* Sesuaikan nama class card Anda */
+    background: rgba(22, 27, 34, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nominal-card:hover {
+    border-color: rgba(0, 242, 254, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Nominal Saat Dipilih (Active) */
+.nominal-card.active {
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.12), rgba(22, 27, 34, 0.9));
+    border: 1.5px solid #00f2fe;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+input, select, textarea {
+    background: rgba(13, 17, 23, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 10px !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #00f2fe !important;
+    box-shadow: 0 0 12px rgba(0, 242, 254, 0.35) !important;
+    outline: none !important;
+}
+.qris-container {
+    background: rgba(18, 22, 30, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 16px;
+    backdrop-filter: blur(8px);
+}
+
+#qrisImg {
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#qrisImg:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+.btn-submit { /* Sesuaikan nama class tombol Anda */
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 114, 255, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    box-shadow: 0 12px 30px rgba(0, 114, 255, 0.6);
+    transform: translateY(-2px);
+}
+/* --- PERBAIKAN TAMPILAN GAMBAR KARTU --- */
+.card-img-wrapper {
+    height: 130px !important;
+    position: relative;
+    overflow: hidden;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Membuat ikon watermark bawaan agak transparan di atas gambar */
+.card-watermark {
+    opacity: 0.25;
+    font-size: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #ffffff;
+}
+
+/* Efek transisi kartu agar terlihat mewah saat disentuh kursor */
+.product-card {
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(0, 242, 254, 0.5) !important;
+    box-shadow: 0 12px 30px rgba(0, 242, 254, 0.2) !important;
+}
+/* --- PERBAIKAN UTAMA AGAR RAPI & MEWAH --- */
+.product-card {
+    background: #121824 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+}
+
+.product-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(0, 242, 254, 0.5) !important;
+    box-shadow: 0 12px 30px rgba(0, 242, 254, 0.2) !important;
+}
+
+.card-img-wrapper {
+    height: 130px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+.card-info {
+    padding: 14px !important;
+    background: #121824 !important;
+}
+
+.card-info h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.card-info p {
+    font-size: 12px !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+}
+
+.card-badge {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(0, 242, 254, 0.15) !important;
+    border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    color: #00f2fe !important;
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+    border-radius: 20px !important;
+}
+/* --- HERO BANNER MEWAH & ELEGAN --- */
+.hero-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto;
+    background: linear-gradient(135deg, #121824 0%, #0d111a 100%);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    border-radius: 20px;
+    padding: 32px 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+/* Efek Cahaya Neon Halus di Sudut Banner */
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.35);
+    color: #00f2fe;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.hero-content p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* --- STYLE LENGKAP UNTUK FANIT STORE --- */
+
+/* Grid Kartu Produk */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+/* Kartu Produk Mewah */
+.product-card {
+    background: #121824 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px) !important;
+    border-color: rgba(0, 242, 254, 0.5) !important;
+    box-shadow: 0 12px 30px rgba(0, 242, 254, 0.2) !important;
+}
+
+.card-img-wrapper {
+    height: 130px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+.card-info {
+    padding: 14px !important;
+    background: #121824 !important;
+}
+
+.card-info h3 {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    color: #ffffff !important;
+    margin: 0 0 4px 0 !important;
+}
+
+.card-info p {
+    font-size: 12px !important;
+    color: #94a3b8 !important;
+    margin: 0 !important;
+}
+
+.card-badge {
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: rgba(0, 242, 254, 0.15) !important;
+    border: 1px solid rgba(0, 242, 254, 0.4) !important;
+    color: #00f2fe !important;
+    font-size: 11px !important;
+    padding: 3px 8px !important;
+    border-radius: 20px !important;
+    z-index: 2;
+}
+
+/* Tombol Kategori Filter */
+.category-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.filter-btn {
+    background: #121824;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: rgba(0, 242, 254, 0.4);
+    color: #ffffff;
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+    border-color: transparent;
+    color: #07090e;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+}
+
+/* Hero Banner Mewah */
+.hero-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto;
+    background: linear-gradient(135deg, #121824 0%, #0d111a 100%);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    border-radius: 20px;
+    padding: 32px 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0, 242, 254, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 242, 254, 0.1);
+    border: 1px solid rgba(0, 242, 254, 0.35);
+    color: #00f2fe;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    margin-bottom: 12px;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.hero-content p {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* ========================================================
+   FLOATING BOTTOM NAVIGATION BAR (MOBILE UX)
+   ================================================-------- */
+.floating-bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 12px;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.floating-bottom-nav .nav-item {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.floating-bottom-nav .nav-item i {
+  font-size: 1.25rem;
+  margin-bottom: 3px;
+}
+
+.floating-bottom-nav .nav-item:hover,
+.floating-bottom-nav .nav-item.active {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* Muncul hanya di layar HP / Tablet (< 768px) */
+@media (max-width: 768px) {
+  .floating-bottom-nav {
+    display: flex;
+  }
+  /* Beri jarak bawah body agar konten tidak tertutup nav */
+  body {
+    padding-bottom: 75px; 
+  }
+}
+/* ========================================================
+   BANNER CAROUSEL / HERO SLIDER
+   ======================================================== */
+.hero-banner {
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.3s ease;
+}
+
+.dot.active {
+  background: #38bdf8;
+  width: 22px;
+  border-radius: 4px;
+}
+/* ========================================================
+   UPGRADE HERO BANNER AGAR TIDAK POLOS
+   ======================================================== */
+.hero-banner {
+  background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.12) 0%, rgba(15, 23, 42, 0) 70%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 10px 0 !important;
+}
+
+/* Mempercantik kotak carousel dengan efek glassmorphism & border glow */
+.carousel-container {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  margin: 15px auto;
+  max-width: 1100px;
+}
+
+/* Mempertegas teks judul di banner */
+.carousel-slide h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  max-width: 600px;
+}
+/* ========================================================
+   MEMBUAT CARD PRODUK LEBIH KOMPAK & PROPOTIONAL
+   ======================================================== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.4);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Tinggi gambar diperkecil agar tidak terlalu panjang ke bawah */
+.card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 105px; 
+  background-color: #1e293b;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Padding teks di bawah card dibuat lebih ringkas */
+.card-info {
+  padding: 10px 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-info h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-info p {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Ukuran badge di pojok card */
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(4px);
+  color: #38bdf8;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+/* ========================================================
+   SOCIAL PROOF TOAST NOTIFICATION
+   ======================================================== */
+.social-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transform: translateY(120px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: none;
+}
+
+.social-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  font-size: 1.4rem;
+}
+
+.toast-user {
+  font-weight: 600;
+  color: #38bdf8;
+  font-size: 0.82rem;
+  display: block;
+}
+
+.toast-content p {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+}
+/* ========================================================
+   ORDER TRACKER TIMELINE (PROGRESS BAR)
+   ======================================================== */
+.order-timeline-container {
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+  display: none; /* Muncul saat dicari */
+}
+
+.order-timeline-container.active {
+  display: block;
+}
+
+.timeline-header {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-header span {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.timeline-steps {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 20px 10px 10px 10px;
+}
+
+/* Garis penghubung antar titik */
+.timeline-steps::before {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  text-align: center;
+}
+
+.step-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #1e293b;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-bottom: 8px;
+}
+
+.step-label {
+  font-size: 0.72rem;
+  color: #64748b;
+  font-weight: 500;
+  max-width: 90px;
+}
+
+/* Status: Aktif atau Selesai */
+.timeline-step.completed .step-icon {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+.timeline-step.completed .step-label {
+  color: #cbd5e1;
+}
+
+.timeline-step.active-step .step-icon {
+  background: #38bdf8;
+  border-color: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+  animation: pulse-glow 1.5s infinite;
+}
+
+.timeline-step.active-step .step-label {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(56, 189, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0); }
+}
+/* ========================================================
+   THEME ACCENT COLOR SWITCHER VARIABLES
+   ======================================================== */
+:root {
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.4);
+}
+
+/* Terapkan variabel ke elemen-elemen penting di web */
+.card-badge, 
+.timeline-step.active-step .step-label,
+.timeline-header span {
+  color: var(--accent) !important;
+}
+
+.product-card:hover {
+  border-color: var(--accent-glow) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px var(--accent-glow);
+}
+
+.timeline-step.active-step .step-icon {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 15px var(--accent-glow) !important;
+}
+
+/* Style Kotak Pemilih Tema di Navbar */
+.theme-switcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: scale(1.25);
+  border-color: #ffffff;
+}
+/* ========================================================
+   NETWORK GRID CANVAS BACKGROUND
+   ======================================================== */
+#networkCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Berada di belakang semua elemen web */
+  pointer-events: none; /* Supaya tidak menghalangi klik mouse */
+  background: #090d16; /* Warna dasar gelap futuristik */
+}
+/* ========================================================
+   SHOPPING CART SYSTEM STYLING
+   ======================================================== */
+.nav-cart-btn {
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: var(--accent);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-cart-btn:hover {
+  background: rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.cart-badge-count {
+  background: var(--accent);
+  color: #0f172a;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* Modal Overlay */
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(9, 13, 22, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cart-modal-overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-modal-box {
+  background: #0f172a;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 450px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.cart-modal-overlay.show .cart-modal-box {
+  transform: translateY(0);
+}
+
+.cart-modal-header {
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-modal-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #fff;
+}
+
+.cart-close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-close-btn:hover {
+  color: #fff;
+}
+
+.cart-items-container {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-empty-text {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 20px 0;
+}
+
+/* Item Card di dalam Modal */
+.cart-item-card {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.cart-item-info span {
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cart-item-remove {
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #ef4444;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.cart-item-remove:hover {
+  background: rgba(239, 68, 68, 0.3);
+}
+
+.cart-modal-footer {
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 0 0 16px 16px;
+}
+
+.cart-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.cart-total-row strong {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.cart-checkout-btn {
+  width: 100%;
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cart-checkout-btn:hover {
+  background: #059669;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+/* ========================================================
+   ADD TO CART BUTTON IN PRODUCT CARD
+   ======================================================== */
+.add-cart-btn {
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: var(--accent);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background: var(--accent);
+  color: #0f172a;
+  box-shadow: 0 0 12px var(--accent-glow);
+}
+/* ========================================================
+   FIX GRID & PRODUCT CARD LAYOUT
+   ======================================================== */
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: auto !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+/* Wrapper Gambar Kartu Produk */
+.card-img-wrapper {
+  width: 100%;
+  height: 145px; /* Tinggi seragam untuk semua kartu */
+  position: relative;
+  overflow: hidden;
+  background-color: #1e293b; /* Warna latar cadangan jika gambar kosong */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Gambar otomatis menyesuaikan dan memenuhi kotak dengan rapi */
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mencegah gambar gepeng / terdistorsi */
+  object-position: center;
+  transition: transform 0.4s ease; /* Efek transisi halus */
+}
+
+/* Efek Aesthetic: Gambar sedikit zoom saat kursor mendekat (hover) */
+.product-card:hover .card-img-wrapper img {
+  transform: scale(1.08);
+}
+/* PAKSA KARTU MEMILIKI UKURAN PROPORSIONAL */
+.product-card {
+  position: relative !important;
+  aspect-ratio: 3 / 4 !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  background-color: #1e293b !important;
+  border: 2px solid transparent !important;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* PAKSA PEMBUNGKUS GAMBAR MEMENUHI FULL 100% KARTU */
+.product-card .card-img-wrapper {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* PAKSA ELEMEN GAMBAR FULL COVER */
+.product-card .card-img-wrapper img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* TEKS MUNCUL SAAT HOVER (SLIDE UP) */
+.product-card .card-info {
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 30px 12px 12px 12px !important;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%) !important;
+  z-index: 2 !important;
+  
+  /* Animasi Sembunyi */
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  transition: opacity 0.3s ease, transform 0.3s ease !important;
+}
+
+/* EFEK HOVER & AKTIF (MENGIKUTI TEMA WARNA WEBSITE) */
+.product-card:hover,
+.product-card.active {
+  /* Menggunakan variable warna tema, jika tidak ada fallback ke oranye */
+  border-color: var(--primary-color, #f59e0b) !important;
+  box-shadow: 0 0 16px var(--primary-glow, rgba(245, 158, 11, 0.4)) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* BADGE KECIL (JIKA INGIN MENGIKUTI WARNA TEMA JUGA) */
+.card-badge {
+  color: var(--primary-color, #38bdf8) !important;
+  border-color: var(--primary-color, rgba(56, 189, 248, 0.3)) !important;
+}
+/* PAKSA POSISI TEKS DI DEPAN & ANIMASINYA JALAN */
+.product-card .card-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 40px 12px 12px 12px !important;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 60%, transparent 100%) !important;
+  z-index: 99 !important; /* Paksa nembus ke depan poster */
+  
+  /* Animasi Sembunyi */
+  opacity: 0 !important;
+  visibility: hidden !important; /* Pakai ini alih-alih display:none */
+  transform: translateY(20px) !important;
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease !important;
+  pointer-events: none !important;
+}
+
+/* PAKSA MUNCUL SAAT DI-HOVER/DIKLIK */
+.product-card:hover .card-info,
+.product-card.active .card-info {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+
+/* WARNA TEKS BIAR KELIHATAN */
+.product-card .card-info h3 {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  margin: 0 0 4px 0 !important;
+}
+
+.product-card .card-info p {
+  color: #d4d4d8 !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+}
+/* 1. VARIABEL DEFAULT ATAS */
+:root {
+  --primary-color: #0ea5e9; /* Warna default awal */
+}
+
+/* 2. TOMBOL KATEGORI AKTIF (Semua, Game Top Up, dll) */
+.category-btn.active,
+.tab-btn.active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px var(--primary-color) !important;
+}
+
+/* 3. BORDER & HOVER KARTU PRODUK */
+.product-card:hover,
+.product-card.active {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 16px var(--primary-color) !important;
+}
+
+/* 4. CURSOR POINTER UNTUK BULATAN WARNA */
+.color-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.color-dot:hover {
+  transform: scale(1.2);
+}
+/* 1. PAKSA KONTANER MENGGUNAKAN GRID (Bukan Flexbox) */
+.product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. KUNCI UKURAN KARTU PRODUK */
+.product-card {
+  width: 100% !important;
+  height: auto !important;
+  flex: none !important; /* Matikan sifat flex yang bikin melar */
+  position: relative !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  background-color: #1e293b !important;
+}
+
+/* 3. KUNCI RASIO GAMBAR (Bentuk 3:4 Seimbang) */
+.card-img-wrapper {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 3 / 4 !important; /* Mengunci proporsi tinggi & lebar kartu */
+  overflow: hidden !important;
+}
+
+.card-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Mencegah gambar gepeng atau meluas */
+  display: block !important;
+}
+/* 1. KUNCI CONTAINER (ID & CLASS) */
+#productGrid,
+.product-grid,
+.product-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+}
+
+/* 2. PAKSA MATIKAN MELAR FLEXBOX PADA KARTU */
+#productGrid > .product-card,
+.product-grid > .product-card,
+.product-card {
+  /* Matikan flex-grow agar tidak memenuhi baris */
+  flex: 0 0 auto !important; 
+  flex-grow: 0 !important;
+  flex-shrink: 0 !important;
+  
+  /* Batasi lebar maksimal kartu agar sama dengan kartu lain */
+  width: 100% !important;
+  max-width: 100% !important;
+  grid-column: auto !important; /* Mencegah kartu mengambil span penuh */
+}
+
+/* 3. KUNCI PROPORSI GAMBAR */
+.card-img-wrapper {
+  width: 100% !important;
+  aspect-ratio: 3 / 4 !important;
+  overflow: hidden !important;
+}
+
+.card-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+/* PAKSA JUMLAH KOLOM SPESIFIK (4 KOLOM DESKTOP / 2 KOLOM HP) */
+#productGrid,
+.product-grid,
+.product-container {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important; /* 4 Kolom sejajar menyamping */
+  gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.product-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+/* RESPONSIF UNTUK LAYAR HP */
+@media (max-width: 768px) {
+  #productGrid,
+  .product-grid,
+  .product-container {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 Kolom di HP */
+    gap: 10px !important;
+  }
+}
+/* === FIX PERMANEN GRID PRODUK === */
+
+/* 1. Paksa wadah luar mekar 100% penuh */
+main, section, .content, .container, .wrapper {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Grid Flexibel: Minimal 150px per kartu, otomatis menyesuaikan layar */
+#productGrid,
+.product-grid,
+.product-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+  gap: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 3. Ukuran Kartu */
+.product-card {
+  width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.card-img-wrapper {
+  width: 100% !important;
+  aspect-ratio: 1 / 1 !important; /* Bentuk presisi persegi */
+  overflow: hidden !important;
+}
+
+.card-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+/* ================= STYLING LOGO CUSTOM ================= */
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  text-decoration: none !important;
+}
+
+/* Pengaturan Ukuran & Efek Gambar Logo */
+.brand-logo-img {
+  width: 40px !important;                 /* Lebar logo */
+  height: 40px !important;                /* Tinggi logo */
+  object-fit: contain !important;         /* Mencegah gambar gepeng */
+  border-radius: 10px !important;         /* Sudut melengkung */
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4) !important; /* Efek glowing biru */
+  transition: transform 0.3s ease !important;
+}
+
+.navbar-brand:hover .brand-logo-img {
+  transform: scale(1.08) !important;      /* Efek membesar halus saat kursor diarahkan */
+}
+
+/* Pengaturan Teks Brand */
+.brand-text {
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+}
+
+.brand-text span {
+  color: #00f2fe !important;              /* Warna aksen biru pada tulisan Store */
+}
+/* ================= STYLING INFO & HARGA KARTU ================= */
+.card-info {
+  padding: 10px 12px 14px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+  text-align: left !important;
+  background-color: #111827 !important;
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.card-info h3 {
+  font-size: 0.9rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.card-subtitle {
+  font-size: 0.72rem !important;
+  color: #94a3b8 !important;
+  margin: 0 !important;
+}
+
+.card-price {
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  color: #00f2fe !important;
+  margin-top: 4px !important;
+  display: inline-block !important;
+}
+
+/* ================= MODAL CHECKOUT STYLING ================= */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 450px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #94a3b8;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.modal-header p {
+  margin: 4px 0 0 0;
+  font-size: 0.8rem;
+  color: #00f2fe;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #ffffff;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #00f2fe;
+}
+
+.nominal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.nominal-item input {
+  display: none;
+}
+
+.nominal-item span {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nominal-item input:checked + span {
+  background: #00f2fe;
+  color: #0f172a;
+  border-color: #00f2fe;
+}
+
+.payment-fixed-box {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 12px 14px !important;
+  background: #1e293b !important;
+  border: 1px solid #00f2fe !important;
+  border-radius: 8px !important;
+  color: #ffffff !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+}
+
+.qris-tag {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  font-weight: 900 !important;
+  font-size: 0.75rem !important;
+  padding: 3px 8px !important;
+  border-radius: 4px !important;
+  letter-spacing: 0.5px !important;
+}
+
+.btn-submit-order {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit-order:hover {
+  opacity: 0.9;
+}
+/* STYLING TOMBOL PAKET DI MODAL */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.package-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.package-card:hover {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.15);
+}
+
+.package-card.active {
+  border-color: #38bdf8;
+  background: rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+/* ================= ANNOUNCEMENT BAR STYLES ================= */
+.announcement-bar {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 8px 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  position: relative;
+  z-index: 999;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-content span {
+  margin-right: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.marquee-content i {
+  color: var(--accent, #38bdf8);
+}
+
+.announcement-bar:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* ================= KALKULATOR GAME STYLES ================= */
+.calculator-section {
+  max-width: 1200px;
+  margin: 50px auto 30px auto;
+  padding: 0 20px;
+}
+
+.calc-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.calc-header h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.calc-header h2 i {
+  color: var(--accent, #38bdf8);
+}
+
+.calc-header p {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.calc-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.calc-card h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.calc-card h3 i {
+  color: var(--accent, #38bdf8);
+}
+
+.calc-card .form-group {
+  margin-bottom: 16px;
+}
+
+.calc-card label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.calc-card input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #fff;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.calc-card input:focus {
+  border-color: var(--accent, #38bdf8);
+}
+
+.btn-calc {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(135deg, var(--accent, #38bdf8), #0284c7);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-calc:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.calc-result {
+  margin-top: 16px;
+  padding: 12px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.calc-result p {
+  margin: 4px 0;
+  color: #e2e8f0;
+}
+
+.highlight-price {
+  color: var(--accent, #38bdf8);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+/* ========================================================
+   FIX RESPONSIF MOBILE TAMPILAN HP (FanIT Store)
+   ======================================================== */
+@media screen and (max-width: 768px) {
+
+  /* 1. Mencegah Konten Tertutup Floating Bottom Nav */
+  body {
+    padding-bottom: 85px !important;
+  }
+
+  .container {
+    padding: 0 12px !important;
+  }
+
+  /* 2. Perbaikan Header & Navbar */
+  .navbar {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 10px 14px !important;
+    gap: 10px !important;
+  }
+
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  /* Titik Warna Tema Menyamping di Sebelah Logo */
+  .theme-colors {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 6px !important;
+    margin: 0 !important;
+  }
+
+  .color-dot {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Sembunyikan Tombol Riwayat & Lacak di Header 
+     (Karena Sudah Ada di Navigation Bar Bawah HP) */
+  .nav-action-group {
+    display: none !important;
+  }
+
+  /* Search Box Penuh Memenuhi Lebar */
+  .search-box {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .search-box input {
+    width: 100% !important;
+    padding: 8px 12px 8px 36px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* 3. Hero Banner Adjustments */
+  .hero-banner {
+    margin: 10px 0 !important;
+    padding: 15px !important;
+    border-radius: 12px !important;
+  }
+
+  .carousel-slide h2 {
+    font-size: 1.2rem !important;
+  }
+
+  .carousel-slide p {
+    font-size: 0.8rem !important;
+  }
+
+  /* 4. Filter Kategori (Bisa Di-swipe / Scroll Menyamping Rapi) */
+  .category-filters {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding: 6px 0 10px 0 !important;
+    gap: 8px !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hilangkan scrollbar Firefox */
+  }
+
+  .category-filters::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar Chrome/Safari */
+  }
+
+  .tab-btn {
+    flex: 0 0 auto !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* 5. Grid Produk 2 Kolom Presisi */
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  .product-card {
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    background: #1e293b;
+    display: flex !important;
+    flex-direction: column !important;
+    position: relative !important;
+  }
+
+  /* Gambar Produk Selalu Kotak Sempurna (Ratio 1:1) */
+  .card-img-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    overflow: hidden !important;
+    background-color: #0f172a;
+  }
+
+  .card-img-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+  }
+
+  .card-badge {
+    position: absolute !important;
+    top: 6px !important;
+    right: 6px !important;
+    font-size: 0.65rem !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    z-index: 2;
+  }
+
+  .card-info {
+    padding: 8px 10px !important;
+  }
+
+  .card-info h3 {
+    font-size: 0.85rem !important;
+    margin-bottom: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .card-info p {
+    font-size: 0.7rem !important;
+    color: #94a3b8;
+  }
+}
+/* ========================================================
+   SINKRONISASI WARNA TEMA UNTUK SEMUA ELEMEN UTAMA
+   ======================================================== */
+
+/* 1. Ikon Logo Gamepad (Header) */
+.logo-icon {
+  background: var(--primary-color) !important;
+  box-shadow: 0 0 15px var(--primary-color) !important;
+}
+
+/* 2. Tombol Filter Kategori Aktif (Semua, Game, Streaming, dll) */
+.tab-btn.active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px var(--primary-color) !important;
+}
+
+/* 3. Tombol Kirim Ulasan & Form Checkout */
+.btn-submit-review,
+.btn-submit,
+.btn-submit-order {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px var(--primary-color) !important;
+}
+
+/* 4. Tombol Lacak Pesanan (Header) */
+.nav-btn.primary-glow {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 0 15px var(--primary-color) !important;
+}
+
+/* 5. Badge Instant / Garansi pada Kartu Produk */
+.card-badge {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 2px 8px var(--primary-color) !important;
+}
+
+/* 6. Indikator Slide Carousel Banner */
+.carousel-dots .dot.active {
+  background-color: var(--primary-color) !important;
+  box-shadow: 0 0 10px var(--primary-color) !important;
+}
+
+/* 7. Aksen Teks & Icon */
+.logo .highlight,
+.hero-badge,
+.marquee-content i {
+  color: var(--primary-color) !important;
+}
+/* ========================================================
+   FIX TULISAN HERO BANNER (PUTIH SOLID & TEGAS)
+   ======================================================== */
+.carousel-slide h2,
+.hero-banner h2 {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+/* ========================================================
+   Sembunyikan Badge / Tombol Biru Pojok Kanan Atas Kartu
+   ======================================================== */
+.card-badge {
+  display: none !important;
+}
+/* ========================================================
+   FIX WARNA TOMBOL KATEGORI (HAPUS GRADASI BIRU BAWAAN)
+   ======================================================== */
+.tab-btn.active {
+  background: var(--primary-color) !important; /* Menimpa seluruh latar belakang */
+  background-image: none !important;           /* Menghapus gradasi biru bawaan */
+  border-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px var(--primary-color) !important;
+}
+/* ========================================================
+   PERBAIKAN HERO BANNER SUPER RAPI & SIMETRIS
+   ======================================================== */
+
+.hero-banner {
+  position: relative;
+  margin: 24px 5%;
+  padding: 40px 24px;
+  border-radius: 20px;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(15, 23, 42, 0.85) 0%, rgba(9, 13, 22, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Ambient Glow Halus di Latar Belakang */
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  height: 120px;
+  background: var(--primary-color);
+  filter: blur(80px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* 1. Badge Top Up */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+/* 2. Judul Utama & Warna Highlight */
+.hero-banner h2 {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 0 0 12px 0 !important;
+  letter-spacing: -0.5px;
+  line-height: 1.3 !important;
+}
+
+.hero-banner h2 .highlight {
+  color: var(--primary-color) !important;
+}
+
+/* 3. Deskripsi Teks */
+.hero-banner p {
+  color: #94a3b8 !important;
+  font-size: 0.92rem !important;
+  max-width: 550px;
+  margin: 0 auto 24px auto !important;
+  line-height: 1.6 !important;
+}
+
+/* 4. Tag Fitur Bawah (Terpisah Rapi Berbentuk Pill) */
+.hero-trust-tags {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+}
+
+.hero-trust-tags span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.hero-trust-tags span i {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.hero-trust-tags span:hover {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Penyesuaian Layar HP */
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 28px 16px;
+  }
+  .hero-banner h2 {
+    font-size: 1.45rem !important;
+  }
+  .hero-trust-tags {
+    gap: 8px !important;
+  }
+  .hero-trust-tags span {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
+/* ========================================================
+   FIX SIMETRIS & HILANGKAN BINGKAI GANDA (DOUBLE BOX)
+   ======================================================== */
+
+/* 1. Atur Bingkai Utama */
+.hero-banner {
+  position: relative;
+  margin: 24px 5%;
+  padding: 36px 24px 24px 24px !important; /* Jarak atas & bawah seimbang */
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Neutralize Elemen Carousel Dalam Agar Tidak Jadi Kotak Lagi */
+.carousel-container,
+.carousel-slide {
+  width: 100%;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 3. Atur Margin Elemen Agar Presisi & Rapi */
+.hero-badge {
+  margin-bottom: 16px !important;
+}
+
+.hero-banner h2 {
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  margin: 0 0 12px 0 !important;
+  line-height: 1.3 !important;
+}
+
+.hero-banner p {
+  color: #94a3b8 !important;
+  font-size: 0.92rem !important;
+  max-width: 540px;
+  margin: 0 auto 20px auto !important;
+  line-height: 1.5 !important;
+}
+
+/* 4. Tag Pill Bawah */
+.hero-trust-tags {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-bottom: 24px !important; /* Jarak menuju titik carousel */
+}
+
+/* 5. Indikator Dots Posisi Pas di Tengah Bawah */
+.carousel-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-top: auto;
+}
+/* ========================================================
+   FORCE ALIGN CENTER TOTAL (HERO BANNER & CAROUSEL)
+   ======================================================== */
+
+/* 1. Kotak Luar Banner Utama di Tengah Layar */
+.hero-banner {
+  width: 90% !important;
+  max-width: 1200px !important;
+  margin: 24px auto !important; /* Paksa outer box di tengah layar */
+  padding: 36px 20px 24px 20px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+/* 2. Pembungkus Carousel & Slide Rata Tengah Presisi */
+.carousel-container {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+}
+
+.carousel-slide {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Paksa anak elemen (badge, h2, p, tags) di tengah */
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* 3. Paksa Semua Konten Dalam Rata Tengah Presisi */
+.hero-badge,
+.hero-banner h2,
+.hero-banner p,
+.hero-trust-tags,
+.carousel-dots {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+/* 4. Tag Pill Bawah Presisi di Tengah */
+.hero-trust-tags {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  gap: 12px !important;
+  margin-bottom: 24px !important;
+}
+
+/* 5. Dots Indikator di Tengah */
+.carousel-dots {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+/* ========================================================
+   FIX CAROUSEL SLIDE JUMPING / JEDUG (STABILIZER)
+   ======================================================== */
+
+/* 1. Kunci Tinggi Minimum Pembungkus Carousel */
+.carousel-container {
+  width: 100% !important;
+  min-height: 230px !important; /* Mengunci tinggi ruang slide agar konstan */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+}
+
+/* 2. Samakan Ukuran Seluruh Slide & Tambah Transisi Halus */
+.carousel-slide {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 230px !important; /* Samakan dengan container */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important; /* Menjaga isi tetap di tengah secara vertikal */
+  box-sizing: border-box !important;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out !important; /* Efek perpindahan mulus */
+}
+
+/* 3. Kunci Ruang Judul dan Deskripsi */
+.hero-banner h2 {
+  min-height: 2.8rem; /* Menyiapkan ruang judul agar tidak mendorong elemen lain */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 12px 0 !important;
+}
+
+.hero-banner p {
+  min-height: 2.8rem; /* Menyiapkan ruang deskripsi agar pas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto !important;
+}
+
+/* 4. Penyesuaian Ketinggian untuk HP */
+@media screen and (max-width: 600px) {
+  .carousel-container,
+  .carousel-slide {
+    min-height: 270px !important; /* Ruang lebih tinggi untuk teks HP yang melipat */
+  }
+  .hero-banner h2,
+  .hero-banner p {
+    min-height: auto;
+  }
+}
+/* =========================================================
+   FIX TAMPILAN MOBILE / HP (MAX-WIDTH: 768PX)
+   ========================================================= */
+@media (max-width: 768px) {
+
+  /* 1. PERBAIKAN HERO BANNER & JUDUL TERBELAH */
+  .hero-banner {
+    padding: 1rem 0.5rem;
+  }
+
+  .carousel-slide {
+    padding: 1.2rem 0.75rem !important;
+    text-align: center !important;
+  }
+
+  .carousel-slide h2 {
+    display: block !important;          /* Paksa teks kembali menyatu ke bawah */
+    font-size: 1.35rem !important;       /* Ukuran font pas untuk HP */
+    line-height: 1.3 !important;
+    margin: 0.75rem 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .carousel-slide h2 span.highlight {
+    display: inline !important;        /* Teks highlight menyatu secara alami */
+  }
+
+  .carousel-slide p {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  /* Trust Tags Badge (QRIS, Promo, 24/7) */
+  .hero-trust-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 0.4rem !important;
+  }
+
+  .hero-trust-tags span {
+    font-size: 0.7rem !important;
+    padding: 0.35rem 0.65rem !important;
+  }
+
+  /* 2. PERBAIKAN NAVBAR & SEARCH BOX */
+  .navbar {
+    padding: 0.75rem 0.8rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .search-box input {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 0.8rem 0.5rem 2.2rem !important;
+  }
+
+  /* 3. PERBAIKAN FILTER KATEGORI (SCROLL HORIZONTAL MULUS) */
+  .category-filters {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem 0.2rem 0.8rem 0.2rem !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;               /* Sembunyikan scrollbar Firefox */
+  }
+
+  .category-filters::-webkit-scrollbar {
+    display: none;                        /* Sembunyikan scrollbar Chrome/Safari */
+  }
+
+  .tab-btn {
+    flex: 0 0 auto !important;
+    padding: 0.45rem 0.9rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  /* 4. PERBAIKAN GRID PRODUK (2 KOLOM RAPI) */
+  .product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.6rem !important;
+  }
+
+  .product-card {
+    padding: 0.6rem !important;
+  }
+
+  .card-info h3 {
+    font-size: 0.8rem !important;
+  }
+
+  .card-info p {
+    font-size: 0.7rem !important;
+  }
+
+  /* 5. PERBAIKAN FOOTER DI HP */
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    padding: 1.5rem 1rem !important;
+  }
+
+  .footer-brand p {
+    font-size: 0.8rem !important;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-links ul li a {
+    font-size: 0.8rem !important;
+    display: inline-block;
+  }
+
+  .footer-contact p {
+    font-size: 0.8rem !important;
+  }
+
+  /* 6. PERBAIKAN GRID ULASAN DI HP */
+  .reviews-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+}
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.package-card {
+  background: #3f4756;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.package-card:hover {
+  transform: translateY(-2px);
+  border-color: #f59e0b;
+}
+
+.package-card.active {
+  border: 2px solid #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+  background: #475266;
+}
+
+.card-body-content {
+  padding: 12px;
+  text-align: left;
+}
+
+.card-title-text {
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.card-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-item-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.card-price-text {
+  color: #fbbf24;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.card-footer-badge {
+  background: #2d3442;
+  padding: 6px 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.badge-instan {
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  text-transform: uppercase;
+}
+
+.badge-instan i {
+  color: #0284c7;
+  font-size: 0.65rem;
+}
